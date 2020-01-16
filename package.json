@@ -1,0 +1,31 @@
+{
+  "name": "dedupe-xlsx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "run": "npx ts-node index.ts",
+    "build": "npx tsc",
+    "pack": "npm run build && npx pkg --config ./package.json --out-path ./dist/dedupe-xlsx ./build/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^13.1.7",
+    "pkg": "^4.4.2",
+    "ts-node": "^8.6.2",
+    "tsc": "^1.20150623.0",
+    "typescript": "^3.7.4"
+  },
+  "dependencies": {
+    "commander": "^4.1.0",
+    "exceljs": "^3.5.0"
+  },
+  "pkg": {
+    "targets": [
+      "latest-win-x64",
+      "latest-macos-x64"
+    ]
+  }
+}
